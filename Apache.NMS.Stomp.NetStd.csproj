@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.5.4.3216</Version>
+    <Version>1.5.4.3217</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Apache Software Foundation, William D Cossey</Authors>
@@ -14,12 +14,21 @@
     <RepositoryUrl>https://github.com/wdcossey/Apache.NMS.Stomp.NetStd</RepositoryUrl>
     <PackageTags>Apache,NMS,Messaging,Stomp,NetStandard</PackageTags>
     <PackageReleaseNotes>Apache.NMS.Stomp (http://activemq.apache.org/nms/apachenmsstomp.html) for .NET Standard.
+Added CLSCompliant assembly info.
 Updated Apache.NMS.NetStd dependancy.</PackageReleaseNotes>
     <RootNamespace>Apache.NMS.Stomp</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;NETCORE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETCORE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Apache.NMS.NetStd" Version="1.7.1.3897" />
+    <PackageReference Include="Apache.NMS.NetStd" Version="1.7.1.3898" />
   </ItemGroup>
 
 </Project>
