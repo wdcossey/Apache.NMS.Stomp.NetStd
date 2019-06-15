@@ -1,15 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.5.4.3217</Version>
+    <Version>1.5.4.3218</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Apache Software Foundation, William D Cossey</Authors>
     <Product>Apache NMS for Stomp Class Library for .net standard</Product>
     <Description>Apache NMS for Stomp Class Library (.Net Standard Messaging Library Implementation): An implementation of the NMS API for Stomp</Description>
     <Copyright>Copyright (C) 2005-2013 Apache Software Foundation</Copyright>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/wdcossey/Apache.NMS.Stomp.NetStd</PackageProjectUrl>
     <RepositoryUrl>https://github.com/wdcossey/Apache.NMS.Stomp.NetStd</RepositoryUrl>
     <PackageTags>Apache,NMS,Messaging,Stomp,NetStandard</PackageTags>
@@ -17,6 +17,10 @@
 Added CLSCompliant assembly info.
 Updated Apache.NMS.NetStd dependancy.</PackageReleaseNotes>
     <RootNamespace>Apache.NMS.Stomp</RootNamespace>
+    <AssemblyName>Apache.NMS.Stomp</AssemblyName>
+    <PackageId>Apache.NMS.Stomp.NetStd</PackageId>
+    <AssemblyVersion>1.5.4.3218</AssemblyVersion>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -28,7 +32,14 @@ Updated Apache.NMS.NetStd dependancy.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Apache.NMS.NetStd" Version="1.7.1.3898" />
+    <PackageReference Include="Apache.NMS.NetStd" Version="1.7.1.3899" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
